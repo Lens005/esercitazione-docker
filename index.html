@@ -10,5 +10,38 @@
     <h1>Benvenuti nel mio primo progetto Docker!</h1>
     <p>Questo sito web è in esecuzione grazie a Docker e Nginx.</p>
     <p>Progetto realizzato per il corso di Strumenti di Sviluppo Software.</p>
+
+    <hr>
+
+    <h2>Compila questo modulo</h2> 
+
+    <form id="formAccesso"> 
+        <p> 
+            <label for="utente">Nome utente:</label><br> 
+            <input type="text" id="utente" name="utente" required > 
+        </p> 
+        <p> 
+            <label for="password">Password:</label><br> 
+            <input type="password" id="password" name="password" required > 
+            <button type="submit">Accedi</button>
+        </p>  
+    </form> 
+
+    <p id="messaggio"></p> 
+
+    <script> 
+        const form = document.getElementById("formAccesso"); 
+        const utente = document.getElementById("utente"); 
+        const messaggio = document.getElementById("messaggio"); 
+    
+        form.addEventListener("submit", function(event) { 
+            event.preventDefault(); 
+            
+            messaggio.textContent = "Benvenuto, " + utente.value + "! Il modulo funziona correttamente."; 
+            }); 
+            
+    </script>
+
+
 </body>
 </html>
